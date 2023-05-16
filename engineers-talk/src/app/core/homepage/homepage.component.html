@@ -5,7 +5,6 @@
         <button
           class="navbar-toggler"
           type="button"
-          (click)="backgroundImageExample.toggle()"
           aria-controls="backgroundImageExample"
           aria-expanded="false"
           aria-label="Toggle navigation"
@@ -14,7 +13,7 @@
         </button>
         <div
           mdbCollapse
-          #backgroundImageExample="mdbCollapse"
+        
           class="collapse navbar-collapse"
           id="backgroundImageExample"
         >
@@ -41,19 +40,26 @@
     <div
       class="p-5 text-center bg-image"
       style="
-        background-image: url('assets/background.png');
-        height: 400px;
+        background-image: url('assets/images/background3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 800px;
       "
     >
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="mask" style="background-color: rgba(194, 200, 192, 0.6);">
         <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white">
-            <h1 class="mb-3">Heading</h1>
+            <!-- <h1 class="mb-3">Heading</h1>
             <h4 class="mb-3">Subheading</h4>
             <a class="btn btn-outline-light btn-lg" href="#!" role="button"
               >Call to action</a
-            >
+            > -->
           </div>
+          <div class="container">
+          <p class="welcome-text" [ngClass]="{ 'animate': animate }">{{ typedText }}</p>
+          <audio #typingSound src="assets/sounds/typingSound.mp3"></audio>
+        </div>
         </div>
       </div>
     </div>
