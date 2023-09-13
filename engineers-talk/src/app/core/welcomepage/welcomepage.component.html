@@ -1,0 +1,81 @@
+<header>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Navbar -->
+    <!-- <body>
+
+        <div class="topnav">
+          <a class="active" href="#home">Home</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>      
+        </body> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <!-- <button
+          class="navbar-toggler"
+          type="button"
+          aria-controls="backgroundImageExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button> -->
+        <div
+          mdbCollapse
+        
+          class="collapse navbar-collapse"
+          id="backgroundImageExample"
+        >
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li> -->
+          <!-- </ul> -->
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+  
+    <!-- Background image -->
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url('assets/images/background3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 800px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(194, 200, 192, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <!-- <h1 class="mb-3">Heading</h1>
+            <h4 class="mb-3">Subheading</h4>
+            <a class="btn btn-outline-light btn-lg" href="#!" role="button"
+              >Call to action</a
+            > -->
+            
+          </div>
+          <div class="container">
+          <p class="welcome-text" [ngClass]="{ 'animate': animate }">{{ typedText }}</p>
+          <audio #typingSound src="assets/sounds/typingSound.mp3"></audio>
+        </div>
+       <a href="home">
+        <button class="button-3" id="explorebutton" role="button" (click)="zoomOutAndNavigate()">Let's explore</button></a>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  
