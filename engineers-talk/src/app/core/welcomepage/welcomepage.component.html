@@ -1,7 +1,7 @@
 <header>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Navbar -->
-    <body>
+    <!-- <body>
 
         <div class="topnav">
           <a class="active" href="#home">Home</a>
@@ -9,7 +9,7 @@
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>      
-        </body>
+        </body> -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container-fluid">
         <!-- <button
@@ -45,13 +45,37 @@
       </div>
     </nav>
     <!-- Navbar -->
-    <div class="grid-container">
-        <div class="grid-item" *ngFor="let post of posts">
-          <img class="featured-image" [src]="post.featuredImage" alt="Featured Image">
-          <div class="post-title">{{ post.title }}</div>
-          <div class="post-content">{{ post.content }}</div>
-          <div class="post-author">{{ post.author }}</div>
+  
+    <!-- Background image -->
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url('assets/images/background3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 800px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(194, 200, 192, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <!-- <h1 class="mb-3">Heading</h1>
+            <h4 class="mb-3">Subheading</h4>
+            <a class="btn btn-outline-light btn-lg" href="#!" role="button"
+              >Call to action</a
+            > -->
+            
+          </div>
+          <div class="container">
+          <p class="welcome-text" [ngClass]="{ 'animate': animate }">{{ typedText }}</p>
+          <audio #typingSound src="assets/sounds/typingSound.mp3"></audio>
+        </div>
+       <a href="home">
+        <button class="button-3" id="explorebutton" role="button" (click)="zoomOutAndNavigate()">Let's explore</button></a>
         </div>
       </div>
+    </div>
+    <!-- Background image -->
   </header>
   

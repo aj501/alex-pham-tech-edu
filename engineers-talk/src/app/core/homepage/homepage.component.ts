@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Post } from '../post.interface';
 
 @Component({
   selector: 'app-homepage',
@@ -7,12 +8,14 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   
 })
 export class HomepageComponent implements OnInit {
+
   @ViewChild('typingSound')
   typingSound!: ElementRef<HTMLAudioElement>;
   animate = false;
   typedText = '';
   text = 'Hi! This is Alex Pham. Thank you for visiting my page.';
   interval = 100; // Delay between each letter typing animation (in milliseconds)
+  
 
 
   ngOnInit() {
@@ -37,5 +40,12 @@ export class HomepageComponent implements OnInit {
     audioElement.currentTime = 0;
     audioElement.play();
   }
+
+  posts: Post[] = [
+    { title: 'First Post', content: 'Lorem ipsum dolor sit amet...', author: 'John Doe', featuredImage: 'https://example.com/first-post-image.jpg' },
+    { title: 'Second Post', content: 'Ut enim ad minim veniam...', author: 'Jane Smith', featuredImage: 'https://example.com/second-post-image.jpg' },
+    { title: 'Third Post', content: 'Duis aute irure dolor in reprehenderit...', author: 'Bob Johnson', featuredImage: 'https://example.com/third-post-image.jpg' },
+    // Add more posts as needed
+  ];
 
 }
